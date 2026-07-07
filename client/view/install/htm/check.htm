@@ -93,24 +93,24 @@
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th>扩展函数</th>
-					<th>当前状态</th>
+					<th>Hàm mở rộng</th>
+					<th>Trạng thái hiện tại</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>pdo_mysql</td>
-					<td><?php echo extension_loaded('pdo_mysql') ? '<i class="iconfont icon-check text-success"> 支持</i>' : '<i class="iconfont icon-remove text-danger"> 不支持</i>'; ?></td>
+					<td><?php echo extension_loaded('pdo_mysql') ? '<i class="iconfont icon-check text-success"> Hỗ trợ</i>' : '<i class="iconfont icon-remove text-danger"> Không hỗ trợ</i>'; ?></td>
 				</tr>
 				<tr>
 					<td>mbstring</td>
-					<td><?php echo extension_loaded('mbstring') ? '<i class="iconfont icon-check text-success"> 支持</i>' : '<i class="iconfont icon-remove text-danger"> 不支持</i>'; ?></td>
+					<td><?php echo extension_loaded('mbstring') ? '<i class="iconfont icon-check text-success"> Hỗ trợ</i>' : '<i class="iconfont icon-remove text-danger"> Không hỗ trợ</i>'; ?></td>
 				</tr>
 			</tbody>
 		</table>
 		<p class="button">
-			<button type="button" class="button-prev" onclick="location.href='<?php echo $this->var['const']['path']; ?>index.php/install/read'">上一步</button>
-			<button type="button" class="button-next" onclick="location.href='<?php echo $this->var['const']['path']; ?>index.php/install/create'">下一步</button>
+			<button type="button" class="button-prev" onclick="location.href='<?php echo $this->var['const']['path']; ?>index.php/install/read'">Quay lại</button>
+			<button type="button" class="button-next" onclick="location.href='<?php echo $this->var['const']['path']; ?>index.php/install/create'">Tiếp theo</button>
 		</p>
 	</div>
 	<div class="container">

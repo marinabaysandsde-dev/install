@@ -157,7 +157,7 @@ Nginx + PHP-FPM deployment notes (example):
 
 server {
     listen 80;
-    server_name jubilant-goldfish-gxqrrjr7rjgj29r7j-8001.app.github.dev;
+    server_name domain.com;
     root /var/www/install; # point to your project root
     index index.php index.html;
 

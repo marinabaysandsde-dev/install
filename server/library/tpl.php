@@ -28,6 +28,9 @@ class tpl{
 		$this->var[$key] = $val;
 	}
 	public function get($file){
+	// load i18n helper so templates can call __()
+	$i18n_file = $this->root.'server/library/i18n.php';
+	if(is_file($i18n_file)) require_once $i18n_file;
 		if(isset($this->cache['open']) && $this->cache['open']){
 			ob_start();
 			require $this->folder.$file.'.htm';
