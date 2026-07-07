@@ -1,0 +1,49 @@
+<header class="AppHeader">
+	<div class="AppHeader-globalBar">
+		<div class="AppHeader-globalBar-start">
+			<button type="button" class="Button Button--secondary AppHeader-button p-0" onclick="min.left('<?php echo $GLOBALS['param']['basic']['title']; ?>', '<?php echo $this->var['const']['path']; ?>')">
+				<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon Button-visual">
+					<path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path>
+				</svg>
+			</button>
+			<div class="AppHeader-logo ml-2">
+				<svg width="32" height="32" viewBox="0 0 768 830" version="1.1" class="octicon v-align-middle color-fg-default">
+					<path d="M64.433651,605.899968 C20.067302,536.265612 0,469.698785 0,389.731348 C0,174.488668 171.922656,0 384,0 C596.077344,0 768,174.488668 768,389.731348 C768,469.698785 747.932698,536.265612 703.566349,605.899968 C614.4,753.480595 441.6,870.4 384,870.4 C326.4,870.4 153.6,753.480595 64.433651,605.899968 L64.433651,605.899968 Z"></path>
+					<path d="M429.648991,190.816 L430.160991,190.816 L429.648991,190.816 L429.648991,190.816 Z M429.648991,156 L427.088991,156 C419.408991,157.024 411.728991,160.608 404.560991,168.8 L403.024991,170.848 L206.928991,429.92 C198.736991,441.184 197.712991,453.984 204.368991,466.784 C210.512991,478.048 222.288991,485.728 235.600991,485.728 L336.464991,486.24 L304.208991,673.632 C301.648991,689.504 310.352991,705.376 325.200991,712.032 C329.808991,714.08 334.416991,714.592 339.536991,714.592 C349.776991,714.592 358.992991,709.472 366.160991,700.256 L561.744991,419.168 C569.936991,407.904 570.960991,395.104 564.304991,382.304 C557.648991,369.504 547.408991,363.36 533.072991,363.36 L432.208991,363.36 L463.952991,199.008 C464.464991,196.448 464.976991,193.376 464.976991,190.816 C464.976991,171.872 449.104991,156 431.184991,156 L429.648991,156 L429.648991,156 Z" fill="#f6f8fa"></path>
+				</svg>
+			</div>
+			<div class="AppHeader-context"><span class="AppHeader-context-item">控制台</span></div>
+		</div>
+		<div class="AppHeader-globalBar-end">
+			<a href="<?php echo $this->var['const']['path']; ?>index.php/console/notify" class="AppHeader-button Button--secondary Button">
+				<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+					<path d="M8 16a2 2 0 0 0 1.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 0 0 8 16ZM3 5a5 5 0 0 1 10 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.519 1.519 0 0 1 13.482 13H2.518a1.516 1.516 0 0 1-1.263-2.36l1.703-2.554A.255.255 0 0 0 3 7.947Zm5-3.5A3.5 3.5 0 0 0 4.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.017.017 0 0 0-.003.01l.001.006c0 .002.002.004.004.006l.006.004.007.001h10.964l.007-.001.006-.004.004-.006.001-.007a.017.017 0 0 0-.003-.01l-1.703-2.554a1.745 1.745 0 0 1-.294-.97V5A3.5 3.5 0 0 0 8 1.5Z"<?php if($this->var['login']['notify']){echo ' fill="#d1242f"';} ?>></path>
+				</svg>
+			</a>
+			<button type="button" class="AppHeader-button global-create-button Button--secondary Button width-auto" onclick="min.drop('<?php echo $this->var['const']['path']; ?>')">
+				<span class="Button-content">
+					<span class="Button-visual Button-leadingVisual">
+						<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+							<path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path>
+						</svg>
+					</span>
+					<span class="Button-label">
+						<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+							<path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
+						</svg>
+					</span>
+				</span>
+			</button>
+			<div class="AppHeader-user">
+				<button type="button" class="AppHeader-logo Button--invisible Button color-bg-transparent p-0" onclick="min.right(<?php echo $this->var['login']['id']; ?>, '<?php echo $this->var['login']['name']; ?>', '<?php echo $this->var['login']['nick']; ?>', '<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['member']; ?>')">
+					<span class="Button-content">
+						<span class="Button-label"><img src="<?php echo $this->var['avatar']; ?>" height="32" width="32" class="avatar"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="header_drop" class="hide"></div>
+<div class="Overlay Overlay--placement-left hide"></div>
+<div class="Overlay Overlay--placement-right hide"></div>

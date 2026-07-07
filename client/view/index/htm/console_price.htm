@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="<?php echo $this->var['const']['charset']; ?>">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>计费规则</title>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/console.js"></script>
+<link href="<?php echo $this->var['const']['path']; ?>client/view/index/css/console.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<?php require $this->root.'client/view/index/htm/console_header.htm'; ?>
+	<div class="pt-4 container-xl p-responsive">
+		<?php require $this->root.'client/view/index/htm/console_nav.htm'; ?>
+		<div class="Layout Layout--flowRow-until-md">
+			<?php require $this->root.'client/view/index/htm/console_aside.htm'; ?>
+			<article class="Layout-main">
+				<div class="Layout-main-centered-xl">
+					<div class="container-xl">
+						<div class="Subhead mt-0 mb-0"><h2 class="Subhead-heading Subhead-heading--large">计费规则</h2></div>
+						<div class="box">
+							<table>
+								<tr>
+									<td colspan="2">
+										<svg width="40" height="40" viewBox="0 0 24 24" version="1.1" class="octicon" style="margin-left:12px">
+											<path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z" fill="#0969da"></path>
+										</svg>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+											<path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z" fill="#a6ce39"></path>
+										</svg>
+										<span style="margin-left:5px">登录赠分</span>
+									</td>
+									<td>+<?php echo intval($GLOBALS['param']['extend']['extend_login']); ?></td>
+								</tr>
+								<tr>
+									<td>
+										<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+											<path d="m4.927 5.427 2.896 2.896a.25.25 0 0 0 .354 0l2.896-2.896A.25.25 0 0 0 10.896 5H8.75V.75a.75.75 0 1 0-1.5 0V5H5.104a.25.25 0 0 0-.177.427Z" fill="#a6ce39"></path>
+											<path d="M1.573 2.573a.25.25 0 0 0-.073.177v7.5a.25.25 0 0 0 .25.25h12.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-3a.75.75 0 1 1 0-1.5h3A1.75 1.75 0 0 1 16 2.75v7.5A1.75 1.75 0 0 1 14.25 12h-3.727c.099 1.041.52 1.872 1.292 2.757A.75.75 0 0 1 11.25 16h-6.5a.75.75 0 0 1-.565-1.243c.772-.885 1.192-1.716 1.292-2.757H1.75A1.75 1.75 0 0 1 0 10.25v-7.5A1.75 1.75 0 0 1 1.75 1h3a.75.75 0 0 1 0 1.5h-3a.25.25 0 0 0-.177.073ZM6.982 12a5.72 5.72 0 0 1-.765 2.5h3.566a5.72 5.72 0 0 1-.765-2.5H6.982Z" fill="#a6ce39"></path>
+										</svg>
+										<span style="margin-left:5px">下载扣分</span>
+									</td>
+									<td>-<?php echo intval($GLOBALS['param']['extend']['extend_down']); ?></td>
+								</tr>
+								<tr>
+									<td>
+										<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+											<path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z" fill="#a6ce39"></path>
+										</svg>
+										<span style="margin-left:5px">封装扣分</span>
+									</td>
+									<td>-<?php echo intval($GLOBALS['param']['extend']['extend_webview']); ?></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	<?php require $this->root.'client/view/index/htm/console_footer.htm'; ?>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="<?php echo $this->var['const']['charset']; ?>">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title><?php echo $this->var['app']['name']; ?></title>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/qrcode.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/app.js"></script>
+<link href="<?php echo $this->var['const']['path']; ?>client/view/index/css/app.css" rel="stylesheet" type="text/css">
+</head>
+<body data-path="<?php echo $this->var['const']['path']; ?>" data-captcha="<?php echo intval($GLOBALS['param']['extend']['extend_captcha']); ?>">
+	<?php if($this->var['browser']){ ?>
+	<div class="browser">
+		<p>
+			<img src="<?php echo $this->var['const']['path']; ?>client/view/index/css/browser.png">
+			<span onclick="$('.browser').hide()">×</span>
+		</p>
+	</div>
+	<?php } ?>
+	<span class="pattern left"><img src="<?php echo $this->var['const']['path']; ?>client/view/index/css/left.png"></span>
+	<span class="pattern right"><img src="<?php echo $this->var['const']['path']; ?>client/view/index/css/right.png"></span>
+	<div class="out-container">
+		<div class="main">
+			<header data-id="<?php echo base64_encode($this->var['app']['id']); ?>" data-type="<?php echo $this->var['app']['type']; ?>">
+				<div class="table-container">
+					<div class="cell-container">
+						<div class="app-brief">
+							<div class="img-container wrapper">
+								<i class="bg-path icon-bg"></i>
+								<span class="icon"><img src="<?php echo $this->var['icon']; ?>"></span>
+								<span class="qrcode"></span>
+							</div>
+							<h1 class="name wrapper">
+								<span class="app-warp">
+									<i class="icon-<?php echo $this->var['app']['type'] ? 'ios' : 'android'; ?>"></i>
+									<b><?php echo $this->var['app']['name']; ?></b>
+								</span>
+							</h1>
+							<p class="scan-tips">扫描二维码<span>或</span>手机浏览器输入网址安装</p>
+							<div class="release-info">
+								<p><?php echo $this->var['app']['minos'].'（'.$this->var['size']($this->var['app']['size']).'）'; ?></p>
+								<p>发布时间：<?php echo $this->var['app']['date']; ?></p>
+							</div>
+							<div class="btn"><button type="button" onclick="lib.down($('body').data('captcha'))">安装</button></div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="section" data-mid="<?php echo $this->var['app']['mid']; ?>">
+				<?php if($this->var['with']){ ?>
+				<div class="type">
+					<div class="info">
+						<p class="type-icon"><i class="icon-<?php echo $this->var['with']['type'] ? 'ios' : 'android'; ?>"></i></p>
+						<p class="version">关联版本：<?php echo $this->var['with']['version']; ?></p>
+						<p class="version">安装要求：<?php echo $this->var['with']['minos']; ?></p>
+						<p class="version">文件大小：<?php echo $this->var['size']($this->var['with']['size']); ?></p>
+					</div>
+				</div>
+				<?php } ?>
+				<div class="type">
+					<div class="info">
+						<p class="type-icon"><i class="icon-<?php echo $this->var['app']['type'] ? 'ios' : 'android'; ?>"></i></p>
+						<p class="version">当前版本：<?php echo $this->var['app']['version']; ?></p>
+						<p class="version">下载次数：<?php echo $this->var['app']['down']; ?></p>
+						<p class="version">发布用户：<a href="javascript:void(0)" onclick="lib.person($('.section').data('mid'), $('body').data('path'))">个人名片</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="footer">Copyright &copy; <?php echo date('Y'); ?> <a href="//<?php echo $_SERVER['HTTP_HOST']; ?>" target="_blank"><?php echo $_SERVER['HTTP_HOST']; ?></a> All Rights Reserved</div>
+		</div>
+	</div>
+</body>
+</html>

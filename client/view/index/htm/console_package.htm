@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="<?php echo $this->var['const']['charset']; ?>">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>网址封装</title>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/project.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/console.js"></script>
+<link href="<?php echo $this->var['const']['path']; ?>client/view/index/css/console.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<?php require $this->root.'client/view/index/htm/console_header.htm'; ?>
+	<div class="pt-4 container-xl p-responsive">
+		<?php require $this->root.'client/view/index/htm/console_nav.htm'; ?>
+		<div class="Layout Layout--flowRow-until-md">
+			<?php require $this->root.'client/view/index/htm/console_aside.htm'; ?>
+			<article class="Layout-main">
+				<div class="Layout-main-centered-xl">
+					<div class="container-xl">
+						<div class="Subhead border-bottom-0 mb-0"><h2 class="Subhead-heading Subhead-heading--large">网址封装</h2></div>
+						<div class="UnderlineNav">
+							<ul class="UnderlineNav-body">
+								<li>
+									<a href="<?php echo $this->var['const']['path']; ?>index.php/console/webview" class="UnderlineNav-item">
+										<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+											<path d="M1.5 3.25c0-.966.784-1.75 1.75-1.75h2.5c.966 0 1.75.784 1.75 1.75v2.5A1.75 1.75 0 0 1 5.75 7.5h-2.5A1.75 1.75 0 0 1 1.5 5.75Zm7 0c0-.966.784-1.75 1.75-1.75h2.5c.966 0 1.75.784 1.75 1.75v2.5a1.75 1.75 0 0 1-1.75 1.75h-2.5A1.75 1.75 0 0 1 8.5 5.75Zm-7 7c0-.966.784-1.75 1.75-1.75h2.5c.966 0 1.75.784 1.75 1.75v2.5a1.75 1.75 0 0 1-1.75 1.75h-2.5a1.75 1.75 0 0 1-1.75-1.75Zm7 0c0-.966.784-1.75 1.75-1.75h2.5c.966 0 1.75.784 1.75 1.75v2.5a1.75 1.75 0 0 1-1.75 1.75h-2.5a1.75 1.75 0 0 1-1.75-1.75ZM3.25 3a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h2.5A.25.25 0 0 0 6 5.75v-2.5A.25.25 0 0 0 5.75 3Zm7 0a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25Zm-7 7a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25Zm7 0a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25Z"></path>
+										</svg>
+										<span style="margin-left:5px">封装列表</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo $this->var['const']['path']; ?>index.php/console/package" aria-current="page" class="UnderlineNav-item">
+										<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+											<path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path>
+										</svg>
+										<span style="margin-left:5px;font-weight:600">发布封装</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo $this->var['const']['path']; ?>index.php/console/ssl" class="UnderlineNav-item">
+										<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+											<path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"></path>
+										</svg>
+										<span style="margin-left:5px">配置证书</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="gutter d-flex flex-shrink-0 flex-column-reverse flex-md-row">
+							<div class="col-12">
+								<form onsubmit="lib.package('<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['member']; ?>');return false">
+									<dl class="form-group">
+										<dt><label for="way">封装方式</label></dt>
+										<dd>
+											<select class="form-control form-select" id="way">
+												<option value="0">安卓编译打包</option>
+												<option value="1">苹果免签封装</option>
+											</select>
+										</dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="name">应用名称</label></dt>
+										<dd><input type="text" id="name" class="form-control"></dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="url">应用网址</label></dt>
+										<dd><input type="text" id="url" class="form-control"></dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label>应用图标</label></dt>
+										<dd class="auth-list">
+											<input type="file" onchange="lib.icon($(this), '<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['member']; ?>')" class="hide">
+											<div class="auth-item" onclick="$(this).prev().click()">
+												<i></i>
+												<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="spinner hide">
+													<circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2"></circle>
+													<path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+												</svg>
+												<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+													<path d="M16 13.25A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75ZM1.75 2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h.94l.03-.03 6.077-6.078a1.75 1.75 0 0 1 2.412-.06L14.5 10.31V2.75a.25.25 0 0 0-.25-.25Zm12.5 11a.25.25 0 0 0 .25-.25v-.917l-4.298-3.889a.25.25 0 0 0-.344.009L4.81 13.5ZM7 6a2 2 0 1 1-3.999.001A2 2 0 0 1 7 6ZM5.5 6a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0Z"></path>
+												</svg>
+												<span>上传图标</span>
+											</div>
+										</dd>
+									</dl>
+									<hr class="hr">
+									<p>
+										<button type="submit" class="Button--primary Button">
+											<span class="Button-content"><span class="Button-label">发布</span></span>
+										</button>
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	<?php require $this->root.'client/view/index/htm/console_footer.htm'; ?>
+</body>
+</html>

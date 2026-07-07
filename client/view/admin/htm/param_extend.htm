@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="<?php echo $this->var['const']['charset']; ?>">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>扩展设置</title>
+<link href="<?php echo $this->var['const']['path']; ?>client/view/admin/css/form.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/admin/js/param.js"></script>
+</head>
+<body>
+	<div class="clearfix">
+		<div class="panel-body">
+			<div class="builder formbuilder-box">
+				<div class="builder-tabs">
+					<div class="row">
+						<div class="col-xs-12">
+							<ul class="nav nav-tabs">
+								<li><a href="<?php echo $this->var['const']['path']; ?>index.php/admin/param">基本设置</a></li>
+								<li><a href="<?php echo $this->var['const']['path']; ?>index.php/admin/param/cache">缓存设置</a></li>
+								<li class="active"><a>扩展设置</a></li>
+								<li><a href="<?php echo $this->var['const']['path']; ?>index.php/admin/param/mail">邮件设置</a></li>
+								<li><a href="<?php echo $this->var['const']['path']; ?>index.php/admin/param/shield">防控设置</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="builder-container">
+					<div class="row">
+						<div class="col-xs-12">
+							<form class="form-horizontal form-builder" onsubmit="lib.write('<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['account']; ?>');return false">
+								<div class="form-type-list">
+									<div class="form-group">
+										<label class="left control-label">强制实名：</label>
+										<div class="right">
+											<select class="form-control select" name="extend_auth">
+												<optgroup label="发布应用需实名认证">
+													<option value="1">启用</option>
+												</optgroup>
+												<optgroup label="发布应用无限制">
+													<option value="0"<?php if(!$GLOBALS['param']['extend']['extend_auth']){echo ' selected="selected"';} ?>>禁用</option>
+												</optgroup>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="left control-label">强制验证：</label>
+										<div class="right">
+											<select class="form-control select" name="extend_captcha">
+												<optgroup label="下载应用需图形验证">
+													<option value="1">启用</option>
+												</optgroup>
+												<optgroup label="下载应用无限制">
+													<option value="0"<?php if(!$GLOBALS['param']['extend']['extend_captcha']){echo ' selected="selected"';} ?>>禁用</option>
+												</optgroup>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="left control-label">登录赠分：</label>
+										<div class="right">
+											<input class="form-control input" type="text" name="extend_login" oninput="lib.entry(this, 'number')" value="<?php echo $GLOBALS['param']['extend']['extend_login']; ?>" placeholder="单位：个，每日登录赠送积分">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="left control-label">下载扣分：</label>
+										<div class="right">
+											<input class="form-control input" type="text" name="extend_down" oninput="lib.entry(this, 'number')" value="<?php echo $GLOBALS['param']['extend']['extend_down']; ?>" placeholder="单位：个，下载应用扣除积分">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="left control-label">封装扣分：</label>
+										<div class="right">
+											<input class="form-control input" type="text" name="extend_webview" oninput="lib.entry(this, 'number')" value="<?php echo $GLOBALS['param']['extend']['extend_webview']; ?>" placeholder="单位：个，封装应用扣除积分">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="left control-label">购钥链接：</label>
+										<div class="right">
+											<input class="form-control input" type="text" name="extend_buy" value="<?php echo $GLOBALS['param']['extend']['extend_buy']; ?>" placeholder="购买充值密钥的商品链接，比如淘宝或闲鱼店铺地址">
+										</div>
+									</div>
+									<div class="form-group"><hr /></div>
+									<div class="form-group bottom_button_list">
+										<button type="submit" class="btn btn-primary">保存</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

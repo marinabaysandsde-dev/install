@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="<?php echo $this->var['const']['charset']; ?>">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>隐私设置</title>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/profile.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/console.js"></script>
+<link href="<?php echo $this->var['const']['path']; ?>client/view/index/css/console.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<?php require $this->root.'client/view/index/htm/console_header.htm'; ?>
+	<div class="pt-4 container-xl p-responsive">
+		<?php require $this->root.'client/view/index/htm/console_nav.htm'; ?>
+		<div class="Layout Layout--flowRow-until-md">
+			<?php require $this->root.'client/view/index/htm/console_aside.htm'; ?>
+			<article class="Layout-main">
+				<div class="Layout-main-centered-xl">
+					<div class="container-xl">
+						<div class="Subhead mt-0 mb-0"><h2 class="Subhead-heading Subhead-heading--large">隐私设置</h2></div>
+						<div class="gutter d-flex flex-shrink-0 flex-column-reverse flex-md-row">
+							<div class="col-12">
+								<form onsubmit="lib.priv('<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['member']; ?>');return false">
+									<dl class="form-group">
+										<dt><label for="priv_name">邮箱帐号</label></dt>
+										<dd>
+											<select class="form-control form-select" id="priv_name">
+												<option value="0">公开</option>
+												<option value="1"<?php if($this->var['login']['priv_name']){echo ' selected="selected"';} ?>>保密</option>
+											</select>
+										</dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="priv_point">积分余额</label></dt>
+										<dd>
+											<select class="form-control form-select" id="priv_point">
+												<option value="0">公开</option>
+												<option value="1"<?php if($this->var['login']['priv_point']){echo ' selected="selected"';} ?>>保密</option>
+											</select>
+										</dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="priv_auth">认证状态</label></dt>
+										<dd>
+											<select class="form-control form-select" id="priv_auth">
+												<option value="0">公开</option>
+												<option value="1"<?php if($this->var['login']['priv_auth']){echo ' selected="selected"';} ?>>保密</option>
+											</select>
+										</dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="priv_phone">个人手机</label></dt>
+										<dd>
+											<select class="form-control form-select" id="priv_phone">
+												<option value="0">公开</option>
+												<option value="1"<?php if($this->var['login']['priv_phone']){echo ' selected="selected"';} ?>>保密</option>
+											</select>
+										</dd>
+									</dl>
+									<hr class="hr">
+									<p>
+										<button type="submit" class="Button--primary Button">
+											<span class="Button-content"><span class="Button-label">保存</span></span>
+										</button>
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	<?php require $this->root.'client/view/index/htm/console_footer.htm'; ?>
+</body>
+</html>

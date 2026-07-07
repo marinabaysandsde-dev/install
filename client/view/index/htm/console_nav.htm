@@ -1,0 +1,36 @@
+<?php if($GLOBALS['param']['extend']['extend_auth']){ ?>
+<?php if($this->var['login']['auth'] == 1){ ?>
+<div class="Banner flash text-left mb-3 p-0 Banner--success">
+	<div class="Banner-visual">
+		<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+			<path d="m9.585.52.929.68c.153.112.331.186.518.215l1.138.175a2.678 2.678 0 0 1 2.24 2.24l.174 1.139c.029.187.103.365.215.518l.68.928a2.677 2.677 0 0 1 0 3.17l-.68.928a1.174 1.174 0 0 0-.215.518l-.175 1.138a2.678 2.678 0 0 1-2.241 2.241l-1.138.175a1.17 1.17 0 0 0-.518.215l-.928.68a2.677 2.677 0 0 1-3.17 0l-.928-.68a1.174 1.174 0 0 0-.518-.215L3.83 14.41a2.678 2.678 0 0 1-2.24-2.24l-.175-1.138a1.17 1.17 0 0 0-.215-.518l-.68-.928a2.677 2.677 0 0 1 0-3.17l.68-.928c.112-.153.186-.331.215-.518l.175-1.14a2.678 2.678 0 0 1 2.24-2.24l1.139-.175c.187-.029.365-.103.518-.215l.928-.68a2.677 2.677 0 0 1 3.17 0ZM7.303 1.728l-.927.68a2.67 2.67 0 0 1-1.18.489l-1.137.174a1.179 1.179 0 0 0-.987.987l-.174 1.136a2.677 2.677 0 0 1-.489 1.18l-.68.928a1.18 1.18 0 0 0 0 1.394l.68.927c.256.348.424.753.489 1.18l.174 1.137c.078.509.478.909.987.987l1.136.174a2.67 2.67 0 0 1 1.18.489l.928.68c.414.305.979.305 1.394 0l.927-.68a2.67 2.67 0 0 1 1.18-.489l1.137-.174a1.18 1.18 0 0 0 .987-.987l.174-1.136a2.67 2.67 0 0 1 .489-1.18l.68-.928a1.176 1.176 0 0 0 0-1.394l-.68-.927a2.686 2.686 0 0 1-.489-1.18l-.174-1.137a1.179 1.179 0 0 0-.987-.987l-1.136-.174a2.677 2.677 0 0 1-1.18-.489l-.928-.68a1.176 1.176 0 0 0-1.394 0ZM11.28 6.78l-3.75 3.75a.75.75 0 0 1-1.06 0L4.72 8.78a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L7 8.94l3.22-3.22a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path>
+		</svg>
+	</div>
+	<div class="Banner-message"><p>您已通过实名认证审核，发布应用无限制。</p></div>
+</div>
+<?php }else{ ?>
+<div class="Banner flash text-left mb-3 p-0 Banner--warning">
+	<div class="Banner-visual">
+		<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+			<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+		</svg>
+	</div>
+	<div class="Banner-message"><p>本站已启用强制实名，请先完成实名认证！</p></div>
+</div>
+<?php } ?>
+<?php } ?>
+<nav class="d-md-flex flex-items-center flex-justify-between mt-1 mb-4">
+	<div class="d-flex flex-items-center mb-2 mb-md-0">
+		<img src="<?php echo $this->var['avatar']; ?>" height="48" width="48" class="avatar mr-3">
+		<div class="flex-auto">
+			<h1 class="h3 lh-condensed"><span class="color-fg-default"><?php echo $this->var['login']['name']; ?></span></h1>
+			<div class="d-flex flex-items-center flex-wrap color-fg-accent"><p class="color-fg-muted mb-0 mr-1"><?php echo $this->var['login']['nick']; ?></p></div>
+		</div>
+	</div>
+	<a onclick="min.person(<?php echo $this->var['login']['id']; ?>, '<?php echo $this->var['const']['path']; ?>')" class="btn btn-sm">
+		<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+			<path d="M9.923 5.302c.063.063.122.129.178.198H14A.75.75 0 0 1 14 7h-3.3l.578 5.163.362 2.997a.75.75 0 0 1-1.49.18L9.868 13H6.132l-.282 2.34a.75.75 0 0 1-1.49-.18l.362-2.997L5.3 7H2a.75.75 0 0 1 0-1.5h3.9a2.54 2.54 0 0 1 .176-.198 3 3 0 1 1 3.847 0ZM9.2 7.073h-.001a1.206 1.206 0 0 0-2.398 0L6.305 11.5h3.39ZM9.5 3a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 3Z"></path>
+		</svg>
+		<span>个人名片</span>
+	</a>
+</nav>

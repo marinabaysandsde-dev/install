@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="<?php echo $this->var['const']['charset']; ?>">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>更新资料</title>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/pack/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/profile.js"></script>
+<script type="text/javascript" src="<?php echo $this->var['const']['path']; ?>client/view/index/js/console.js"></script>
+<link href="<?php echo $this->var['const']['path']; ?>client/view/index/css/console.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<?php require $this->root.'client/view/index/htm/console_header.htm'; ?>
+	<div class="pt-4 container-xl p-responsive">
+		<?php require $this->root.'client/view/index/htm/console_nav.htm'; ?>
+		<div class="Layout Layout--flowRow-until-md">
+			<?php require $this->root.'client/view/index/htm/console_aside.htm'; ?>
+			<article class="Layout-main">
+				<div class="Layout-main-centered-xl">
+					<div class="container-xl">
+						<div class="Subhead mt-0 mb-0"><h2 class="Subhead-heading Subhead-heading--large">更新资料</h2></div>
+						<div class="gutter d-flex flex-shrink-0 flex-column-reverse flex-md-row">
+							<div class="col-12 col-md-8">
+								<form onsubmit="lib.info('<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['member']; ?>');return false">
+									<dl class="form-group">
+										<dt><label for="member_nick">个人昵称</label></dt>
+										<dd><input type="text" value="<?php echo $this->var['login']['nick']; ?>" id="member_nick" class="form-control"></dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="member_phone">个人手机</label></dt>
+										<dd><input type="text" value="<?php echo $this->var['login']['phone']; ?>" id="member_phone" class="form-control"></dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="member_link">个人链接</label></dt>
+										<dd><input type="text" value="<?php echo $this->var['login']['link']; ?>" id="member_link" class="form-control"></dd>
+									</dl>
+									<dl class="form-group">
+										<dt><label for="member_intro">个人简介</label></dt>
+										<dd><textarea rows="5" id="member_intro" class="form-control"><?php echo $this->var['login']['intro']; ?></textarea></dd>
+									</dl>
+									<hr class="hr">
+									<p>
+										<button type="submit" class="Button--primary Button">
+											<span class="Button-content"><span class="Button-label">更新</span></span>
+										</button>
+									</p>
+								</form>
+							</div>
+							<div class="col-12 col-md-4">
+								<dl>
+									<dt><label class="d-block mb-2">个人头像</label></dt>
+									<dd>
+										<input type="file" onchange="lib.avatar('<?php echo $this->var['const']['path']; ?>', '<?php echo $_COOKIE['member']; ?>')" class="hide">
+										<div class="dropdown" onclick="$(this).siblings('.hide').click()">
+											<img class="avatar" src="<?php echo $this->var['avatar']; ?>" width="110" height="110">
+											<div class="position-absolute color-bg-default rounded-2 color-fg-default px-2 py-1 left-0 bottom-0 ml-2 mb-2 border">
+												<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="spinner hide">
+													<circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2"></circle>
+													<path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+												</svg>
+												<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" class="octicon">
+													<path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path>
+												</svg>
+												<span>更改</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	<?php require $this->root.'client/view/index/htm/console_footer.htm'; ?>
+</body>
+</html>
